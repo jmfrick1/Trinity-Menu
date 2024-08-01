@@ -23,22 +23,21 @@ Needs robust methods to test against active anti-cheat systems discreetly.
 Installation
 Clone the Repository:
 
-sh
-Copy code
+
 git clone https://github.com/jmfrick1/Trinity-Menu.git
 cd Trinity-Menu/ASTS
 Set Up Virtual Environments:
 
 Create virtual environments for the server and application:
-sh
-Copy code
+
+
 python -m venv venv_server
 python -m venv venv_flask
 Install Dependencies:
 
 Activate the virtual environments and install required packages:
-sh
-Copy code
+
+
 source venv_server/bin/activate
 pip install -r server-requirements.txt
 deactivate
@@ -49,22 +48,22 @@ deactivate
 Generate Fernet Key:
 
 Generate and store the Fernet key for secure data handling:
-sh
-Copy code
+
+
 source venv_flask/bin/activate
 python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())" > config/fernet.key
 deactivate
 Usage
 Start the Server:
 
-sh
-Copy code
+
+
 source venv_server/bin/activate
 python server.py
 Run the Application:
 
-sh
-Copy code
+
+
 source venv_flask/bin/activate
 python app.py
 Access the Interface:
