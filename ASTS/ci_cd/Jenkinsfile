@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                script {
+                    def server = load 'server-requirements.txt'
+                    def app = load 'requirements.txt'
+                    echo "Requirements for server: ${server}"
+                    echo "Requirements for app: ${app}"
+                }
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'pytest'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'echo Deploying...'
+            }
+        }
+    }
+}

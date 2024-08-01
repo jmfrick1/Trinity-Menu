@@ -1,0 +1,25 @@
+{
+    "logging_server": "http://example.com/log",
+    "debug_mode": true,
+    "server_port": 5000,
+    "aimbot": {
+        "enabled": false,
+        "aim_key": "VK_XBUTTON1",
+        "aim_fov": 90,
+        "smoothness": 1.0,
+        "aim_bone": "head",
+        "aim_priority": "distance",
+        "max_distance": 1000,
+        "triggerbot_enabled": false,
+        "rapid_fire_enabled": false,
+        "headshot_percentage": 100,
+        "limb_targeting_enabled": false,
+        "excluded_groups": []
+    },
+    "esp": {
+        "enabled": true,
+        "player_color": [255, 0, 0],
+        "item_color": [0, 255, 0],
+        "skeleton_color": [255, 255, 0]
+    }
+}
